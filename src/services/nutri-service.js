@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const globalAPI = {
-    API_URL: 'http://localhost:3005/',
+    API_URL: 'http://localhost:4005/',
 }
 
 const apiUrl = globalAPI.API_URL + "nutritions";
