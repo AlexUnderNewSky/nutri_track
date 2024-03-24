@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./NutritionForm.css";
-import { createNutrition } from "../../../services/nutrition-service";
+import { createNutrition } from "../../../services/nutri-service";
 import { v4 as uuidv4 } from 'uuid';
 
 export function NutritionForm() {
