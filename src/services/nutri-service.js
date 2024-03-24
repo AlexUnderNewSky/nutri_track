@@ -4,7 +4,7 @@ export const globalAPI = {
     API_URL: 'http://localhost:3005/',
 }
 
-const apiUrl = API_URL + "nutritions";
+const apiUrl = globalAPI.API_URL + "nutritions";
 
 export async function getById(id) {
 	return axios.get(`${apiUrl}?id=${id}`);

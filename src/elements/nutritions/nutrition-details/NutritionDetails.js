@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
-import useParams from "react-router-dom";
+import { useParams } from 'react-router-dom';
 import "./NutritionDetails.css";
-import getById from "../../../services/nutri-service";
+import { getById } from "../../../services/nutri-service";
 
 export function NutritionDetails(props) {
   const params = useParams();
@@ -17,8 +17,7 @@ export function NutritionDetails(props) {
           debugger;
           const res = await getById(params.id);
           setNutrition({
-            ...res.data[0],
-            info,
+            ...res.data[0]
           });
     
         } catch (error) {
