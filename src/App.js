@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { NutritionForm } from "./elements/nutritions/nutrition-form/NutritionForm.js";
-//import Layout from "./elements/layout/Layout";
+import Layout from "./elements/layout/Layout";
 import Lead from "./elements/lead/Lead";
 import { NutritionDetails } from "./elements/nutritions/nutrition-details/NutritionDetails.js";
 

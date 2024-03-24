@@ -42,3 +42,29 @@ export function createNutrition(nutrition) {
 
   return axios.post(apiUrl, nutrition);
 }
+export async function getWikipediaInfo(searchTerm) {
+	const response = await axios.get('http://en.wikipedia.org/w/api.php', {
+		params: {
+		  format: 'json',
+		  action: 'query',
+		  generator: 'search',
+		  gsrsearch: searchTerm,
+		  gsrlimit: 10,
+		  prop: 'pageimages|extracts',
+		  pilimit: 'max',
+		  exintro: '',
+		  explaintext: searchTerm,
+		  exsentences: 1,
+		  exlimit: 'max',
+		  origin: '*'
+		}
+	  });
+
+	let combinedExtracts = '';
+	for (const pageId in response.data.query.pages) {
+		const page = response.data.query.pages[+pageId];
+		combinedExtracts += page.extract + ' '; 
+	}
+
+    return combinedExtracts; 
+};

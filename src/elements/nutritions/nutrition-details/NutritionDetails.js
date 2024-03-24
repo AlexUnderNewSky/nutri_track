@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
-import { useParams } from 'react-router-dom';
+import { Button } from "react-bootstrap";
+import { useNavigate, useParams } from "react-router-dom";
 import "./NutritionDetails.css";
-import { getById } from "../../../services/nutri-service";
+import { getById, getWikipediaInfo } from "../../../services/nutri-service";
 
 export function NutritionDetails(props) {
   const params = useParams();
@@ -16,8 +17,10 @@ export function NutritionDetails(props) {
         try {
           debugger;
           const res = await getById(params.id);
+          const info = await getWikipediaInfo(res.data[0].description);
           setNutrition({
-            ...res.data[0]
+            ...res.data[0],
+            info,
           });
     
         } catch (error) {
@@ -84,6 +87,16 @@ export function NutritionDetails(props) {
             type="text"
             name="kcal"
             value={nutrition.kcal}
+            disabled
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="name">
+          <Form.Label>Information</Form.Label>
+          <Form.Control
+            as="textarea"
+            name="info"
+            rows={4}
+            value={nutrition.info}
             disabled
           />
         </Form.Group>

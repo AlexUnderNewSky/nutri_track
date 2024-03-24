@@ -1,0 +1,83 @@
+{
+    "nutritions": [
+      {
+        "id": "6b8a4a31-3498-4018-b317-d94149599c48",
+        "description": "Burger",
+        "kcal": 295,
+        "protein": 17,
+        "fat": 12,
+        "carbs": 29
+      },
+      {
+        "id": "6b8a4a31-3498-4018-b317-d94149599c47",
+        "description": "Pizza",
+        "kcal": 266,
+        "protein": 11,
+        "fat": 10,
+        "carbs": 33
+      },
+      {
+        "id": "6b8a4a31-3498-4018-b317-d94149599c46",
+        "description": "Pasta",
+        "kcal": 131,
+        "protein": 5,
+        "fat": 1,
+        "carbs": 25
+      },
+      {
+        "id": "6b8a4a31-3498-4018-b317-d94149599c45",
+        "description": "Salad",
+        "kcal": 152,
+        "protein": 2,
+        "fat": 10,
+        "carbs": 14
+      },
+      {
+        "id": "6b8a4a31-3498-4018-b317-d94149599c44",
+        "description": "Chicken",
+        "kcal": 165,
+        "protein": 31,
+        "fat": 3.6,
+        "carbs": 0
+      },
+      {
+        "id": "6b8a4a31-3498-4018-b317-d94149599c43",
+        "description": "Salmon",
+        "kcal": 206,
+        "protein": 22,
+        "fat": 12,
+        "carbs": 0
+      },
+      {
+        "id": "6b8a4a31-3498-4018-b317-d94149599c42",
+        "description": "Oatmeal",
+        "kcal": 158,
+        "protein": 6,
+        "fat": 3.2,
+        "carbs": 27
+      },
+      {
+        "id": "6b8a4a31-3498-4018-b317-d94149599c40",
+        "description": "Caca",
+        "protein": 2,
+        "fat": 3,
+        "carbs": 4
+      },
+      {
+        "id": "6c431d9f-5445-427d-a867-d93227219e96",
+        "description": "GG EZ",
+        "protein": 166,
+        "fat": 223,
+        "carbs": 123,
+        "kcal": 636
+      },
+      {
+        "id": "dfe06014-6a46-43f6-ac7c-74c183c2ff7d",
+        "description": "Casio",
+        "protein": 22,
+        "fat": 33,
+        "carbs": 545,
+        "kcal": 565
+      }
+    ]
+  }
