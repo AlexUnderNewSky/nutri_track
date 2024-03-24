@@ -1,13 +1,53 @@
-.nutrition-details-wrapper{
-    height: calc(100vh - 80px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-form {
-    border: 1px solid gray;
+.nutrition-form-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
-    width: 500px;
-}
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .nutrition-form-wrapper h4 {
+    text-align: center;
+    margin-top: 0; /* Убираем отступ сверху у заголовка */
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Увеличиваем отступ между группами полей */
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .field {
+    width: 100%;
+    padding: 12px; /* Увеличиваем отступ внутри поля */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Увеличиваем размер шрифта */
+    transition: border-color 0.3s ease; /* Добавляем плавное изменение цвета при фокусе */
+  }
+  
+  .field:focus {
+    outline: none; /* Убираем обводку при фокусе */
+    border-color: #007bff; /* Изменяем цвет рамки при фокусе */
+  }
+  
+  .text-danger {
+    color: red;
+  }
+  
+  .btn-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px; /* Увеличиваем отступы внутри кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Добавляем плавное изменение цвета при наведении */
+  }
+  
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+  

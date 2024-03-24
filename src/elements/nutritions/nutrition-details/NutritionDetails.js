@@ -1,34 +1,29 @@
-import { useEffect, useState } from "react";
-import { Form } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Formik, Form, Field } from "formik";
 import { useNavigate, useParams } from "react-router-dom";
-import "./NutritionDetails.css";
-import { getById, getWikipediaInfo } from "../../../services/nutri-service";
+import { Button } from "react-bootstrap";
+import "./NutritionDetails.css"; 
+import { getById } from "../../../services/nutri-service";
 
-export function NutritionDetails(props) {
+export function NutritionDetails() {
   const params = useParams();
+  const navigate = useNavigate();
 
   const [isLoading, setIsLoading] = useState(true);
-  const [nutrition, setNutrition] = useState();
+  const [nutrition, setNutrition] = useState(null);
   const [error, setError] = useState("");
 
   useEffect(() => {
-      const fetchNutrition = async () => {
-        try {
-          debugger;
-          const res = await getById(params.id);
-          const info = await getWikipediaInfo(res.data[0].description);
-          setNutrition({
-            ...res.data[0],
-            info,
-          });
-    
-        } catch (error) {
-          setError(error.message);
-        } finally {
-          setIsLoading(false); 
-      };
-    }
+    const fetchNutrition = async () => {
+      try {
+        const res = await getById(params.id);
+        setNutrition(res.data[0]);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
     fetchNutrition();
   }, [params.id]);
@@ -38,69 +33,58 @@ export function NutritionDetails(props) {
       <div className="nutrition-form-wrapper">
         <h4>Loading...</h4>
       </div>
-    )
+    );
   }
 
   return (
     <div className="nutrition-form-wrapper">
-      <Form>
-        {error && <span className="text-danger">{error}</span>}
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Description</Form.Label>
-          <Form.Control
-            type="text"
-            name="description"
-            value={nutrition.description}
-            disabled
-        />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Protein</Form.Label>
-          <Form.Control
-            type="text"
-            name="protein"
-            value={nutrition.protein}
-            disabled
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Fat</Form.Label>
-          <Form.Control
-            type="text"
-            name="fat"
-            value={nutrition.fat}
-            disabled
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Carbs</Form.Label>
-          <Form.Control
-            type="text"
-            name="carbs"
-            value={nutrition.carbs}
-            disabled
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Kcal</Form.Label>
-          <Form.Control
-            type="text"
-            name="kcal"
-            value={nutrition.kcal}
-            disabled
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Information</Form.Label>
-          <Form.Control
-            as="textarea"
-            name="info"
-            rows={4}
-            value={nutrition.info}
-            disabled
-          />
-        </Form.Group>
-      </Form>
+      <Formik
+        initialValues={nutrition}
+        onSubmit={async (values, { setSubmitting }) => {
+          try {
+            // Submit logic here
+          } catch (error) {
+            setError(error.message);
+          } finally {
+            setSubmitting(false);
+          }
+        }}
+      >
+        {({ isSubmitting }) => (
+          <Form>
+            {error && <span className="text-danger">{error}</span>}
+            <div className="form-group">
+              <label htmlFor="description">Description</label>
+              <Field type="text" name="description" disabled className="field" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="protein">Protein</label>
+              <Field type="text" name="protein" disabled className="field" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="fat">Fat</label>
+              <Field type="text" name="fat" disabled className="field" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="carbs">Carbs</label>
+              <Field type="text" name="carbs" disabled className="field" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="kcal">Kcal</label>
+              <Field type="text" name="kcal" disabled className="field" />
+            </div>
+            <Button
+              variant="primary"
+              type="submit"
+              disabled={isSubmitting}
+              className="btn-submit"
+              onClick={() => navigate("/")}
+            >
+              Submit
+            </Button>
+          </Form>
+        )}
+      </Formik>
     </div>
   );
 }

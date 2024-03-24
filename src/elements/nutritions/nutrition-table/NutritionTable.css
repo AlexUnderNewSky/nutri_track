@@ -1,0 +1,46 @@
+.table-wrapper {
+    max-width: 100%;
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку при необходимости */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse; /* Объединяем границы ячеек таблицы */
+    border-radius: 10px; /* Задаем скругление углов таблицы */
+    overflow: hidden; /* Обрезаем контент, выходящий за пределы радиуса скругления */
+  }
+  
+  .table th,
+  .table td {
+    padding: 1rem;
+    border: 1px solid #ccc; /* Добавляем тонкие границы для ячеек таблицы */
+  }
+  
+  .table th {
+    background-color: #007bff; /* Цвет фона заголовков таблицы */
+    color: white;
+    font-weight: bold;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Цвет фона четных строк */
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f0f0f0; /* Изменяем цвет фона строки при наведении */
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Задаем скругление углов кнопки */
+    padding: 0.5rem 1rem; /* Увеличиваем отступы внутри кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Добавляем плавное изменение цвета при наведении */
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  

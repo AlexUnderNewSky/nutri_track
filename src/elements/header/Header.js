@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 import { Fragment } from "react";
+import "./Header.css";
 
 export default function Header(props) {
   return (
