@@ -1,0 +1,30 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px; /* Ширина сайдбара */
+  height: 100%; /* Сайдбар занимает всю высоту экрана */
+  background-color: #F8F9FA; /* Цвет фона сайдбара */
+  border-right: 1px solid #ddd; /* Рамка справа */
+  overflow-y: auto; /* Позволяет прокручивать сайдбар, если он не помещается на экране */
+  z-index: 999; /* Значение z-index, чтобы сайдбар был поверх другого контента */
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}

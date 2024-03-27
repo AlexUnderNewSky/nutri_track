@@ -50,7 +50,7 @@ export default function Lead() {
       <Row>
         <NutritionTable isFiltered nutritions={filteredNutritions} removeSelected={removeSelected}/>
       </Row>
-      <Row>
+      <Row className="top">
         <InputGroup className="mb-3">
           <InputGroup.Text>
             Search                      

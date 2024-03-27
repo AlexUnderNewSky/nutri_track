@@ -6,6 +6,7 @@
     text-align: center;
     position: fixed;
     bottom: 0;
+    z-index: 1000;
   }
   .footer p {
     color: #343a40;

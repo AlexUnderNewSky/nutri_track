@@ -5,8 +5,11 @@
     align-items: center;
 }
 
+.top{
+    margin-top: 10px;
+}
+
 .hero-text {
     font-size: 50px;
     margin-bottom: 50px;
 }
-

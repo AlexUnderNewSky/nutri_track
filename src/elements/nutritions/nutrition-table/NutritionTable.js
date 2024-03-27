@@ -1,13 +1,14 @@
-import { Button, Table } from "react-bootstrap";
+import React from "react";
+import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import "./NutritionTable.css"; // Import new CSS
+import "./NutritionTable.css";
 
 export default function NutritionTable({ isFiltered, nutritions, selectNutrition, removeSelected }) {
   const navigate = useNavigate();
   
   return (
-    <div className="table-wrapper"> {/* Add class .table-wrapper */}
-      <Table striped bordered hover>
+    <div className="table-wrapper">
+      <table>
         <thead>
           <tr>
             {isFiltered && <th>Info</th>}
@@ -16,7 +17,7 @@ export default function NutritionTable({ isFiltered, nutritions, selectNutrition
             <th>Fat (g)</th>
             <th>Carbs (g)</th>
             <th>Kcal</th>
-            <th>Discard</th>
+            <th>Remove</th>
           </tr>
         </thead>
         <tbody>
@@ -30,7 +31,6 @@ export default function NutritionTable({ isFiltered, nutritions, selectNutrition
                   >
                     View
                   </Button>
-                  
                 </td>
               )}
               <td>{nutrition.description}</td>
@@ -39,13 +39,13 @@ export default function NutritionTable({ isFiltered, nutritions, selectNutrition
               <td>{nutrition.carbs}</td>
               <td>{nutrition.kcal}</td>
               <td>
-              <Button 
-                    className="mx-2"
-                    variant="outline-danger"
-                    onClick={() => removeSelected(nutrition.id)}
-                  >
-                    Remove
-                  </Button>
+                <Button 
+                  className="mx-2"
+                  variant="outline-danger"
+                  onClick={() => removeSelected(nutrition.id)}
+                >
+                  Remove
+                </Button>
               </td>
             </tr>
           ))}
@@ -68,7 +68,7 @@ export default function NutritionTable({ isFiltered, nutritions, selectNutrition
             </tr>
           )}
         </tbody>
-      </Table>
+      </table>
     </div>
   );
 }
