@@ -1,76 +1,84 @@
 {
   "nutritions": [
     {
-      "id": "6b8a4a31-3498-4018-b317-d94149599c48",
-      "description": "Burger",
-      "kcal": 295,
-      "protein": 17,
-      "fat": 12,
-      "carbs": 29
-    },
-    {
-      "id": "6b8a4a31-3498-4018-b317-d94149599c47",
-      "description": "Pizza",
-      "kcal": 266,
-      "protein": 11,
-      "fat": 10,
-      "carbs": 33
-    },
-    {
-      "id": "6b8a4a31-3498-4018-b317-d94149599c46",
-      "description": "Pasta",
-      "kcal": 131,
-      "protein": 5,
-      "fat": 1,
-      "carbs": 25
-    },
-    {
-      "id": "6b8a4a31-3498-4018-b317-d94149599c45",
-      "description": "Salad",
-      "kcal": 152,
-      "protein": 2,
-      "fat": 10,
-      "carbs": 14
-    },
-    {
-      "id": "6b8a4a31-3498-4018-b317-d94149599c44",
-      "description": "Chicken",
-      "kcal": 165,
-      "protein": 31,
-      "fat": 3.6,
-      "carbs": 0
-    },
-    {
-      "id": "6b8a4a31-3498-4018-b317-d94149599c43",
-      "description": "Salmon",
-      "kcal": 206,
-      "protein": 22,
-      "fat": 12,
-      "carbs": 0
-    },
-    {
-      "id": "6b8a4a31-3498-4018-b317-d94149599c42",
-      "description": "Oatmeal",
-      "kcal": 158,
-      "protein": 6,
-      "fat": 3.2,
-      "carbs": 27
-    },
-    {
-      "id": "058ad32c-fe1f-434a-9d1f-3ca646991d6d",
+      "id": "545044a4-2a8c-46c6-a853-e8fa0111dc8e",
       "description": "Apple",
-      "protein": 0.3,
-      "fat": 0.2,
+      "protein": 1,
+      "fat": 1,
       "carbs": 14,
       "kcal": 52
     },
     {
-      "id": "7bfcd502-f535-46a7-93f0-095b6e1c2837",
-      "description": "Chicken Breast",
+      "id": "474bc193-0332-4700-981d-dea66b689e6e",
+      "description": "Chicken breast",
       "protein": 31,
       "fat": 3.6,
-      "carbs": 0.1,
+      "carbs": 1,
       "kcal": 165
+    },
+    {
+      "id": "1da13461-69af-4a07-b496-54d98af23ea1",
+      "description": "Oatmeal",
+      "protein": 2.5,
+      "fat": 2.4,
+      "carbs": 25,
+      "kcal": 143
+    },
+    {
+      "id": "c7d0f2cf-bd30-4e7a-820d-960bd6884216",
+      "description": "Salmon (grilled)",
+      "protein": 22,
+      "fat": 12,
+      "carbs": 1,
+      "kcal": 206
+    },
+    {
+      "id": "ba42fa17-fa8e-4155-9dd0-2747f64051ae",
+      "description": "Broccoli (steamed)",
+      "protein": 4.2,
+      "fat": 0.6,
+      "carbs": 11,
+      "kcal": 55
+    },
+    {
+      "id": "b8ce76a3-c0ac-4ef5-bfe0-c12a383ca9f6",
+      "description": "Banana",
+      "protein": 1.3,
+      "fat": 0.4,
+      "carbs": 27,
+      "kcal": 105
+    },
+    {
+      "id": "c821b68b-cbb7-4804-98ae-954da6966a1a",
+      "description": "Brown Rice (cooked)",
+      "protein": 4,
+      "fat": 1.8,
+      "carbs": 45,
+      "kcal": 218
+    },
+    {
+      "id": "fab337e8-7dd6-43f8-b176-2e38fc82ecea",
+      "description": "Greek Yogurt (plain, non-fat)",
+      "protein": 17,
+      "fat": 1,
+      "carbs": 6,
+      "kcal": 100
+    },
+    {
+      "id": "74fc087a-6b1b-4c76-861e-b52ad1f244e1",
+      "description": "Almonds",
+      "protein": 6,
+      "fat": 14,
+      "carbs": 6,
+      "kcal": 100
+    },
+    {
+      "id": "b52a92f1-87b1-44c7-824d-f7d272b659b9",
+      "description": "Ground Beef (lean, cooked)",
+      "protein": 22,
+      "fat": 10,
+      "carbs": 1,
+      "kcal": 200
     }
   ]
 }

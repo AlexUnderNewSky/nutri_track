@@ -57,7 +57,7 @@ export function NutritionForm() {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Protein</Form.Label>
+          <Form.Label>Protein (g)</Form.Label>
           <Form.Control
             type="number"
             name="protein"
@@ -67,22 +67,22 @@ export function NutritionForm() {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Fat</Form.Label>
+          <Form.Label>Fat (g)</Form.Label>
           <Form.Control
             type="number"
             name="fat"
             value={nutrition.fat}
-            placeholder="Enter Fat"
+            placeholder="Enter Fat (g)"
             onChange={onInputChange}
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Carbs</Form.Label>
+          <Form.Label>Carbs (g)</Form.Label>
           <Form.Control
             type="number"
             name="carbs"
             value={nutrition.carbs}
-            placeholder="Enter Carbs"
+            placeholder="Enter Carbs (g)"
             onChange={onInputChange}
           />
         </Form.Group>
@@ -92,7 +92,7 @@ export function NutritionForm() {
             type="number"
             name="kcal"
             value={nutrition.kcal}
-            placeholder="Enter Kcal"
+            placeholder="Enter Kcal (g)"
             onChange={onInputChange}
           />
         </Form.Group>
