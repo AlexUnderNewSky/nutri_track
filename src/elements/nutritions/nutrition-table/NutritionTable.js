@@ -53,9 +53,6 @@ export default function NutritionTable({ isFiltered, nutritions, selectNutrition
             <tr>
               <td colSpan={isFiltered ? 2 : 0}>Total</td>
               <td>
-                {+nutritions.reduce((acc, nutrition) => acc + nutrition.kcal, 0).toFixed(2)}
-              </td>
-              <td>
                 {+nutritions.reduce((acc, nutrition) => acc + nutrition.protein, 0).toFixed(2)}
               </td>
               <td>
@@ -63,6 +60,9 @@ export default function NutritionTable({ isFiltered, nutritions, selectNutrition
               </td>
               <td>
                 {+nutritions.reduce((acc, nutrition) => acc + nutrition.carbs, 0).toFixed(2)}
+              </td>
+              <td>
+                {+nutritions.reduce((acc, nutrition) => acc + nutrition.kcal, 0).toFixed(2)}
               </td>
               <td colSpan={isFiltered ? 1 : 0}>-</td>
             </tr>

@@ -13,6 +13,11 @@
 .nav-link {
   color: #333;
   text-decoration: none;
+ 
+}
+
+.txtalin{
+  text-align: center;
 }
 
 .nav-link:hover {
@@ -27,4 +32,11 @@
 .btn-primary:hover {
   background-color: #0056b3;
   border-color: #0056b3;
+}
+
+/* Убираем сайдбар на маленьких экранах */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
 }

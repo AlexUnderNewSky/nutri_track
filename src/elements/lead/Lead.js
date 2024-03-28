@@ -47,23 +47,24 @@ export default function Lead() {
 
   return (
     <Container>
-      <Row>
-        <NutritionTable isFiltered nutritions={filteredNutritions} removeSelected={removeSelected}/>
-      </Row>
-      <Row className="top">
+      <Row className="search">
         <InputGroup className="mb-3">
           <InputGroup.Text>
             Search                      
           </InputGroup.Text>
           <FormControl
             value={searchTerm}
-            placeholder="Search for a nutrition by typing..." 
-            aria-label="Search for a nutrition by typing..."
+            placeholder="Just start writing for the search..." 
+            aria-label="Just start writing for the search..."
             aria-describedby="basic-addon2"
             onChange={onInputChange}
           />
         </InputGroup>
       </Row>
+      <Row className="viewbox">
+        <NutritionTable isFiltered nutritions={filteredNutritions} removeSelected={removeSelected}/>
+      </Row>
+      
       <Row>
         <NutritionTable 
           nutritions={visibleNutritions} 

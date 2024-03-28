@@ -9,20 +9,20 @@ export default function Sidebar(props) {
   return (
     <div className="sidebar">
       <div className="d-flex flex-column flex-shrink-0 p-3 bg-light" style={{ width: "280px" }}>
-        <Link to="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-          NutriTrack Application
+      <Link to="/" className="d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none w-100">
+        NutriTrack Application
         </Link>
         <hr />
         <ul className="nav nav-pills flex-column mb-auto">
           <Fragment>
             <li className="nav-item">
               <Link className="nav-link" to="/">
-                Main
+                Home
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/add">
-                Add
+                Add New Nutrition
               </Link>
             </li>
           </Fragment>
