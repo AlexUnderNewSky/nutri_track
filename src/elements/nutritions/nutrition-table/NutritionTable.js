@@ -17,7 +17,9 @@ export default function NutritionTable({ isFiltered, nutritions, selectNutrition
             <th>Fat (g)</th>
             <th>Carbs (g)</th>
             <th>Kcal</th>
-            <th>Remove</th>
+            {isFiltered && (
+                <th>Remove</th>
+              )}
           </tr>
         </thead>
         <tbody>
@@ -38,7 +40,8 @@ export default function NutritionTable({ isFiltered, nutritions, selectNutrition
               <td>{nutrition.fat}</td>
               <td>{nutrition.carbs}</td>
               <td>{nutrition.kcal}</td>
-              <td>
+              {isFiltered && (
+                <td>
                 <Button 
                   className="mx-2"
                   variant="outline-danger"
@@ -47,6 +50,7 @@ export default function NutritionTable({ isFiltered, nutritions, selectNutrition
                   Remove
                 </Button>
               </td>
+              )}
             </tr>
           ))}
           {isFiltered && (
@@ -64,7 +68,7 @@ export default function NutritionTable({ isFiltered, nutritions, selectNutrition
               <td>
                 {+nutritions.reduce((acc, nutrition) => acc + nutrition.kcal, 0).toFixed(2)}
               </td>
-              <td colSpan={isFiltered ? 1 : 0}>-</td>
+              <td colSpan={isFiltered ? 1 : 0}></td>
             </tr>
           )}
         </tbody>
