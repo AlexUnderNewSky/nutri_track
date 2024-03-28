@@ -1,13 +1,17 @@
-.nutrition-form-wrapper{
+.nutrition-form-wrapper {
     height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f5f5f5; /* Цвет фона */
 }
 
 form {
-    border: 1px solid gray;
-    padding: 20px;
-    border-radius: 10px;
-    width: 500px;
+    border: none; /* Убираем границу */
+    padding: 30px; /* Увеличиваем отступы */
+    border-radius: 15px; /* Увеличиваем радиус скругления углов */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    width: 400px; /* Уменьшаем ширину формы */
+    background-color: #fff; /* Цвет фона */
+    color: #333; /* Цвет текста */
 }
