@@ -49,9 +49,6 @@ export default function Lead() {
     <Container>
       <Row className="search">
         <InputGroup className="mb-3">
-          <InputGroup.Text>
-            Search                      
-          </InputGroup.Text>
           <FormControl
             value={searchTerm}
             placeholder="Just start writing for the search..." 
